@@ -25,6 +25,8 @@ These are the steps I followed:
 
 ## Preparing the control computer
 
+On Windows 10 using command prompt.
+
 1. Create a new project folder and navigate there.
 
    `C:\Users\User\projects>mkdir remote_gpiozero`
