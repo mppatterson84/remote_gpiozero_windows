@@ -19,7 +19,7 @@ These are the steps I followed:
 
    `$ sudo systemctl enable pigpiod`
 
-4. Find the Raspberry Pi's ip address.
+4. Find the Raspberry Pi's network address.
 
    `$ hostname -I`
 
