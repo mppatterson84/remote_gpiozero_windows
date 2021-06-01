@@ -1,8 +1,9 @@
 from gpiozero import RGBLED
 from time import sleep
+import os
 
 from gpiozero.pins.pigpio import PiGPIOFactory
-factory = PiGPIOFactory(host='192.168.1.19')
+factory = PiGPIOFactory(host=os.environ['REMOTE_IP_ADDRESS'])
 
 led = RGBLED(red=9, green=10, blue=11, pin_factory=factory)
 
