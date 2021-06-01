@@ -19,11 +19,13 @@ These are the steps I followed:
 
    `$ sudo systemctl enable pigpiod`
 
-4. Find the Raspberry Pi's ip address.
+4. Find the Raspberry Pi's network address.
 
    `$ hostname -I`
 
 ## Preparing the control computer
+
+On Windows 10 using command prompt.
 
 1. Create a new project folder and navigate there.
 
