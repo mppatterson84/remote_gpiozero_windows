@@ -2,18 +2,21 @@ from gpiozero import Motor, PWMLED
 import pygame
 import subprocess
 from time import sleep
+import os
+from gpiozero.pins.pigpio import PiGPIOFactory
+factory = PiGPIOFactory(host=os.environ['REMOTE_IP_ADDRESS'])
 
 # Lights
-redpwm = PWMLED(9)
-greenpwm = PWMLED(10)
-bluepwm = PWMLED(11)
-roof_light = PWMLED(22)
+redpwm = PWMLED(9, pin_factory=factory)
+greenpwm = PWMLED(10, pin_factory=factory)
+bluepwm = PWMLED(11, pin_factory=factory)
+roof_light = PWMLED(22, pin_factory=factory)
 #roof_light = Motor(22, 23)
 
 # Motors
-steering = Motor(26, 20)
-motor_rear = Motor(16, 19)
-motor_front = Motor(12, 6)
+steering = Motor(26, 20, pin_factory=factory)
+motor_rear = Motor(16, 19, pin_factory=factory)
+motor_front = Motor(12, 6, pin_factory=factory)
 
 #initializes pygame
 pygame.init()
