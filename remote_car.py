@@ -30,6 +30,7 @@ try:
             controller = pygame.joystick.Joystick(0)
             #initializes the controller
             controller.init()
+            print(pygame.joystick.Joystick(0).get_name())
             print("car started")
             print("press ctrl + c to exit")
             roof_light.toggle()
